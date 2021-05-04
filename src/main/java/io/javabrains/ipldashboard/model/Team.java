@@ -1,6 +1,8 @@
 package io.javabrains.ipldashboard.model;
 
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
 @Entity
@@ -12,6 +14,7 @@ public class Team {
     }
 
     @Id
+    @GeneratedValue (strategy = GenerationType.AUTO)
     private long id;
     private String teamName;
     private long totalMatches;
@@ -47,5 +50,14 @@ public class Team {
 
     public void setTotalWins(long totalWins) {
         this.totalWins = totalWins;
+    }
+
+    @Override
+    public String toString() {
+        return "Team{" +
+                "teamName='" + teamName + '\'' +
+                ", totalMatches=" + totalMatches +
+                ", totalWins=" + totalWins +
+                '}';
     }
 }
