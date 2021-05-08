@@ -1,4 +1,6 @@
 # IPL-Dashboard-Project
 Project following Koushik's tutorial
 
-Fixing first bug
+Feature #1
+
+Video walkthrough 05
